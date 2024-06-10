@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Registration form </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+
+    <style>
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+background: url(images/signupreg.jpg);
+    background-size: cover;
+    color: #fff;
+}
+.registration-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+}
+
+.registration-form h1{
+font-size: 30px;
+text-align: center;
+text-transform: uppercase;
+margin: 40px 0;
+color: black;
+}
+.registration-form p{
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+
+.registration-form input{
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+.registration-form button{
+font-size: 18px;
+font-weight: bold;
+margin: 20px 0;
+padding: 10px 15px;
+width: 50%;
+border: 0;
+border-radius: 5px;
+background-color: #fff;
+
+}
+.registration-form button:hover{
+color: red;
+}
+
+
+    </style>
+
+    <div class="registration-form" id="signupid">
+        <h1 id="signupheading">Signup</h1>
+        <form id="signup-form" action="#" method="post">
+            <p>User Name:</p>
+            <input type="text" name="username" id="username" placeholder="User Name" maxlength="20" required>
+            <span id="usermsg" style="color: red;"></span>
+
+            <p>Email:</p>
+            <input type="email" name="email" id="email"  placeholder="Email" required>
+            <span id="emailmsg" style="color: red;"></span>
+
+            <p>Password:</p>
+            <input type="password" name="password" id="password" placeholder="Password" maxlength="15" required>
+            <span id="passmsg" style="color: red;"></span>
+            <p>Confirm Password:</p>
+            <input type="password" name="password" id="confirmpassword" placeholder="Password" maxlength="15"  required>
+            <span id="confpassmsg" style="color: red;"></span>
+
+            <button type="submit" onclick="signupvalidate()">Submit</button>
+        </form>
+    </div>
+    <span id="message"></span>
+
+
+    <script>
+   function signupvalidate(){
+    document.getElementById("message").innerHTML=""
+
+
+var username = document.getElementById("username").value;
+var email = document.getElementById("email").value;
+var password = document.getElementById("password").value;
+var confirmpassword = document.getElementById("confirmpassword").value;
+  
+document.getElementById("usermsg").innerHTML=""
+if(!validateUsername(username)){
+
+    document.getElementById("usermsg").innerHTML="please Enter a valid UserName"
+    return;
+}
+
+document.getElementById("emailmsg").innerHTML=""
+if(!validateEmail(email)){
+    document.getElementById("emailmsg").innerHTML="please Enter a valid Email"
+    return;
+}
+document.getElementById("passmsg").innerHTML=""
+
+if(!(password.length > 7)){
+    document.getElementById("passmsg").innerHTML="password should contain atleast 8 characters"
+return;
+
+}
+
+document.getElementById("confpassmsg").innerHTML=""
+
+if(!validatePassword(password,confirmpassword)){
+    document.getElementById("confpassmsg").innerHTML="Password mismatch"
+return;
+
+}
+
+document.getElementById("signupid").style.display="none";
+document.getElementById("message").textContent="You Have Registered an Account Successfully";
+
+
+
+}
+
+function validateUsername(username) {
+    var pattern = /^(?=.{4,20}$)(?!.*[_.]{2})[a-zA-Z0-9._]+$/;
+    return pattern.test(username);
+}
+
+
+function validateEmail(email) {
+    var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+}
+
+function validatePassword(password, confirmpassword) {
+    return password === confirmpassword;
+}
+
+
+
+</script>
+
+    
+</body>
+</html>

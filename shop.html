@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title >Trendy</title>
+      <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/006/941/655/small/wedding-dress-women-clothing-boutique-store-logo-icon-symbol-illustration-design-vector.jpg" sizes="500x400">
+      <!-- fontawesome cdn -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel = "stylesheet" href = "shopp.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+   </head>
+   <body>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+         <div class="container-fluid">
+            <a class="navbar-brand " href="shop.html">
+            <img src="images/shopping-bag-icon.png" alt="bagicon">
+            <span class = "attire">Trendy</span>
+            </a>
+            <div class="nav-btns">
+               <button  type="button" class="btn">
+               <i class = "fa fa-shopping-cart"></i>
+               <span class = "count" id="cartcountId">0</span>
+               </button>
+               <button type = "button" class = "btn">
+               <i class = "fa fa-heart"></i>
+               <span class = "count" id="favcountid">0</span>
+               </button>
+               <button type="button" class="btn" id="searchBtn">
+               <i class="fa fa-search"></i>
+               </button>
+               <div id="searchBox" style="display: none;">
+                  <input type="text" id="searchInput" placeholder="Search...">
+                  <button type="button" id="closeBtn">Close</button>
+
+               </div>
+               <div class="account">
+                  <i class="far fa-user-circle" aria-hidden="true"></i>
+                  Account
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  <div class="submenu">
+                     <ul>
+                        <li><a href="file:///C:/Users/lenovo/OneDrive/Desktop/Frontend/PROJECTS/signin.html">Sign In</a></li>
+                        <li><a href="file:///C:/Users/lenovo/OneDrive/Desktop/Frontend/PROJECTS/signup.html#">Register</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link active" aria-current="page" href="#header">home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="#collection">collections</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="#special">specials</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="#blogs">blogs</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="#about">about us</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active"href="#popular">popular</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!-- HEADER -->
+      <header id = "header" class = "carousel slide" data-bs-ride = "carousel">
+         <div class = "container carousel-inner">
+            <div class = "carousel-item active">
+               <h2>best collection</h2>
+               <h1>new arrivals</h1>
+               <a href = "#" class = "btn">shop now</a>
+            </div>
+            <div class = "carousel-item">
+               <h2>best price & offer</h2>
+               <h1>new season</h1>
+               <a href = "#" class ="btn">buy now</a>
+            </div>
+         </div>
+         <button class = "carousel-control-prev" type = "button" data-bs-target="#header" data-bs-slide = "prev">
+         <span class = "carousel-control-prev-icon"></span>
+         </button>
+         <button class = "carousel-control-next" type = "button" data-bs-target="#header" data-bs-slide = "next">
+         <span class = "carousel-control-next-icon"></span>
+         </button>
+      </header>
+      <!-- collection -->
+      <section id = "collection" class = "cc">
+         <div class = "cont">
+            <div class = "title">
+               <h2 class = "position-relative d-inline-block">New Collection</h2>
+            </div>
+            <div class = "row g-0">
+               <div class = "filter-button-group">
+                  <button type = "button" class = "btn active-filter-btn" data-filter = "*">All</button>
+                  <button type = "button" class = "btn" data-filter = ".best">Best Sellers</button>
+                  <button type = "button" class = "btn" data-filter = ".feat">Featured</button>
+                  <button type = "button" class = "btn" data-filter = ".new">New Arrival</button>
+               </div>
+               <div class = "collection-list mt-4 row gx-0 gy-3">
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                     <div class = "collection-img position-relative">
+                        <img src = "images/c_formal_gray_shirt.png" class = "w-100">
+                        <span class = "position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                     </div>
+                     <div class = "text-center">
+                        <div class = "rating mt-3">
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Chudithar</p>
+                        <span class = "fw-bold">$ 45.50</span>
+                     </div>
+                  </div>
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                     <div class = "collection-img position-relative">
+                        <img src = "images/c_pant_girl.png" class = "w-100">
+                        <span class = "position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                     </div>
+                     <div class = "text-center">
+                        <div class = "rating mt-3">
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Blue Jeans</p>
+                        <span class = "fw-bold">$ 45.50</span>
+                     </div>
+                  </div>
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                     <div class = "collection-img position-relative">
+                        <img src = "images/c_polo-shirt.png" class = "w-100">
+                        <span class = "position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                     </div>
+                     <div class = "text-center">
+                        <div class = "rating mt-3">
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Grey Tops</p>
+                        <span class = "fw-bold">$ 45.50</span>
+                     </div>
+                  </div>
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                     <div class = "collection-img position-relative">
+                        <img src = "images/c_shirt-girl.png" class = "w-100">
+                        <span class = "position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                     </div>
+                     <div class = "text-center">
+                        <div class = "rating mt-3">
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Blue Tops</p>
+                        <span class = "fw-bold">$ 45.50</span>
+                     </div>
+                  </div>
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                     <div class = "collection-img position-relative">
+                        <img src = "images/c_t-shirt_men.png" class = "w-100">
+                        <span class = "position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                     </div>
+                     <div class = "text-center">
+                        <div class = "rating mt-3">
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Blue Denims</p>
+                        <span class = "fw-bold">$ 45.50</span>
+                     </div>
+                  </div>
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
+                     <div class = "collection-img position-relative">
+                        <img src = "images/c_tunic-shirt_girl.png" class = "w-100">
+                        <span class = "position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                     </div>
+                     <div class = "text-center">
+                        <div class = "rating mt-3">
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Black shirt</p>
+                        <span class = "fw-bold">$ 45.50</span>
+                     </div>
+                  </div>
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
+                     <div class = "collection-img position-relative">
+                        <img src = "images/c_undershirt.png" class = "w-100">
+                        <span class = "position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                     </div>
+                     <div class = "text-center">
+                        <div class = "rating mt-3">
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Blue skirt</p>
+                        <span class = "fw-bold">$ 45.50</span>
+                     </div>
+                  </div>
+                  <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                     <div class = "collection-img position-relative">
+                        <img src = "images/c_western-shirt.png" class = "w-100">
+                        <span class = "position-absolute bg-danger text-white d-flex align-items-center justify-content-center">sale</span>
+                     </div>
+                     <div class = "text-center">
+                        <div class = "rating mt-3">
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                           <span class = "text-primary"><i class = "fas fa-star"></i></span>
+                        </div>
+                        <p class = "text-capitalize my-1">Black Tops</p>
+                        <span class = "fw-bold">$ 45.50</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end of collection -->
+      <!-- special products -->
+      <section id = "special" >
+         <div class = "con">
+            <div class = "titl">
+               <h2>Special Selection</h2>
+            </div>
+            <div class = "special-list row g-0">
+               <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class = "special-img">
+                     <img src = "images/special_product_1.jpg">
+                     <span id="heartIcon" onclick="changeColor(1)">
+                     <i class = "fas fa-heart" id="heart1"></i>
+                     </span>
+                  </div>
+                  <div class = "text-center">
+                     <p class = "text-capitalize mt-3 mb-1">gray shirt</p>
+                     <span class = "fw-bold d-block">$ 45.50</span>
+                     <a href = "#" class = "btn btn-primary mt-3" onclick="AddtoCart()">Add to Cart</a>
+                  </div>
+               </div>
+               <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class = "special-img">
+                     <img src = "images/special_product_2.jpg">
+                     <span id="heartIcon" onclick="changeColor(2)">
+                        <i class = "fas fa-heart" id="heart2"></i>
+                        </span>
+                  </div>
+                  <div class = "text-center">
+                     <p class = "text-capitalize mt-3 mb-1">gray shirt</p>
+                     <span class = "fw-bold d-block">$ 45.50</span>
+                     <a href = "#" class = "btn btn-primary mt-3" onclick="AddtoCart()">Add to Cart</a>
+                  </div>
+               </div>
+               <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class = "special-img">
+                     <img src = "images/special_product_3.jpg">
+                     <span id="heartIcon" onclick="changeColor(3)">
+                        <i class = "fas fa-heart" id="heart3"></i>
+                        </span>
+                  </div>
+                  <div class = "text-center">
+                     <p class = "text-capitalize mt-3 mb-1">gray shirt</p>
+                     <span class = "fw-bold d-block">$ 45.50</span>
+                     <a href = "#" class = "btn btn-primary mt-3" onclick="AddtoCart()">Add to Cart</a>
+                  </div>
+               </div>
+               <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+                  <div class = "special-img">
+                     <img src = "images/special_product_4.jpg">
+                     <span id="heartIcon" onclick="changeColor(4)">
+                        <i class = "fas fa-heart" id="heart4"></i>
+                        </span>
+                  </div>
+                  <div class = "text-center">
+                     <p class = "text-capitalize mt-3 mb-1">gray shirt</p>
+                     <span class = "fw-bold d-block">$ 45.50</span>
+                     <a href = "#" class = "btn btn-primary mt-3" onclick="AddtoCart()">Add to Cart</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end of special products -->
+      <!-- offers -->
+      <section id = "offers">
+         <div class = "conoff">
+            <div class = "row">
+               <div class = "offers-content">
+                  <span>Discount Up To 40%</span>
+                  <h2 >Grand Sale Offer!</h2>
+                  <a href = "#" class = "btn">Buy Now</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end of offers -->
+      <!-- blogs -->
+      <section id = "blogs">
+         <div class = "contain">
+            <div class = "tit">
+               <h2>Our Latest Blog</h2>
+            </div>
+            <div class = "row g-3">
+               <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                  <img src = "images/blog_1.jpg" alt = "">
+                  <div class = "card-body px-0">
+                     <h4 class = "card-title">Desk to Dinner: Dresses for the Busy Career Woman
+                     </h4>
+                     <p class = "card-text mt-3 text-muted">When your career dress needs to work double time as a cocktail dress for afterwork events, you need a dress that is equally appropriate for the work day and night out. Desk-to-dinner dresses are wardrobe staples for the career.</p>
+                     <p class = "card-text">
+                        <small class = "text-muted">
+                        <span class = "fw-bold"></span>
+                        </small>
+                     </p>
+                     <a href = "#" class = "btn">Read More</a>
+                  </div>
+               </div>
+               <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                  <img src = "images/blog_2.jpg" alt = "">
+                  <div class = "card-body px-0">
+                     <h4 class = "card-title">Bags on wheels have 'come a long way from the bulky tartan shoppers'
+                     </h4>
+                     <p class = "card-text mt-3 text-muted">Shopping trolleys have been given a "complete makeover" and are finding new fans among a younger audience.
+                        They used to be "associated with elderly women who wheeled the drab yet practical accessories around town.
+                     </p>
+                     <p class = "card-text">
+                        <small class = "text-muted">
+                        <span class = "fw-bold"> </span>
+                        </small>
+                     </p>
+                     <a href = "#" class = "btn">Read More</a>
+                  </div>
+               </div>
+               <div class = "card border-0 col-md-6 col-lg-4 bg-transparent my-3">
+                  <img src = "images/blog_3.jpg" alt = "">
+                  <div class = "card-body px-0">
+                     <h4 class = "card-title">Pick Your Personal Favorite Skirts From Our Trendy Store</h4>
+                     <p class = "card-text mt-3 text-muted">One of the most versatile bottoms is a skirt that has been a woman’s first love not just for casual wear but for formal occasions also. This post is dedicated to skirts and their types and the occasions .</p>
+                     <p class = "card-text">
+                        <small class = "text-muted">
+                        <span class = "fw-bold"></span>
+                        </small>
+                     </p>
+                     <a href = "#" class = "btn">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end of blogs -->
+      <!-- about us -->
+      <section id = "about" class = "py-5">
+         <div class = "container">
+            <div class = "row gy-lg-5 align-items-center">
+               <div class = "col-lg-6 order-lg-1 text-center text-lg-start">
+                  <div class = "title pt-3 pb-5">
+                     <h2 class = "position-relative d-inline-block ms-4">About Us</h2>
+                  </div>
+                  <p class = "lead text-muted position-relative d-inline-block">"Discover Your Style: Welcome to [Trendy Store] - Where Trends Meet Affordability!"
+                     .
+                  </p>
+                  <p class="position-relative d-inline-block">Step into our world of fashion where trends meet affordability, and every purchase is a statement of chic individuality. From the latest runway looks to timeless classics, our curated collection offers something for every style seeker.</p>
+               </div>
+               <div class = "col-lg-6 order-lg-0">
+                  <img src = "images/about_us.jpg" alt = "" class = "img-fluid">
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end of about us -->
+      <!-- popular -->
+      <section id = "popular" class = "py-5">
+         <div class = "containee">
+            <div class = "titlee text-center pt-3 pb-5">
+               <h2 class = "position-relative d-inline-block ms-4">Popular Of This Year</h2>
+            </div>
+            <div class = "row move-up">
+               <div class = "col-md-6 col-lg-4 row g-3">
+                  <h3 class = "fs-5">Top Rated</h3>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/top_rated_1.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">Blue Shirt</p>
+                        <span>$ 50.00</span>
+                     </div>
+                  </div>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/top_rated_2.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">Smart Watch</p>
+                        <span>$ 80.00</span>
+                     </div>
+                  </div>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/top_rated_3.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">Red Hoodies</p>
+                        <span>$ 20.00</span>
+                     </div>
+                  </div>
+               </div>
+               <div class = "col-md-6 col-lg-4 row g-3">
+                  <h3 class = "fs-5">Best Selling</h3>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/best_selling_1.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">Grey Shirt</p>
+                        <span>$ 40.00</span>
+                     </div>
+                  </div>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/best_selling_2.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">Blue Shirt</p>
+                        <span>$ 20.00</span>
+                     </div>
+                  </div>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/best_selling_3.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">White T-shirt</p>
+                        <span>$ 20.00</span>
+                     </div>
+                  </div>
+               </div>
+               <div class = "col-md-6 col-lg-4 row g-3">
+                  <h3 class = "fs-5">On Sale</h3>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/on_sale_1.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">Blue Handbag</p>
+                        <span>$ 20.00</span>
+                     </div>
+                  </div>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/on_sale_2.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">Blue Hoodies</p>
+                        <span>$ 20.00</span>
+                     </div>
+                  </div>
+                  <div class = "d-flex align-items-start justify-content-start">
+                     <img src = "images/on_sale_3.jpg" alt = "" class = "img-fluid pe-3 w-25">
+                     <div>
+                        <p class = "mb-0">Sneakers</p>
+                        <span>$ 20.00</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end of popular -->
+      <!-- newsletter -->
+      <section id = "newsletter" class = "py-5">
+         <div class = "container">
+            <div class = "d-flex flex-column align-items-center justify-content-center">
+               <div class = "title text-center pt-3 pb-5">
+                  <h2 class = "position-relative d-inline-block ms-4">Newsletter Subscription</h2>
+               </div>
+               <p class = "text-center text-muted">Be first to know about Dresses, Top's, Pants, Skirts and blog posts!</p>
+               <div class = "input-group mb-3 mt-3">
+                  <input type = "text" class = "form-control" placeholder="Enter Your Email ...">
+                  <button class = "btn btn-primary" type = "submit">Subscribe</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end of newsletter -->
+      <!-- footer -->
+      <footer>
+         <div class = "container">
+            <div class = "row text-white g-4">
+               <div class = "col-md-6 col-lg-3">
+                  <a class = "text-uppercase text-decoration-none brand text-white" href = "index.html">Trendy</a>
+                  <p class = "text-white text-muted mt-3">"Discover Your Style: Welcome to [Trendy Store] - Where Trends Meet Affordability!"
+                  </p>
+               </div>
+               <div class = "col-md-6 col-lg-3">
+                  <h5 class = "fw-light">Links</h5>
+                  <ul class = "list-unstyled">
+                     <li class = "my-3">
+                        <a href = "#home" class = "text-white text-decoration-none text-muted">
+                        <i class = "fas fa-chevron-right me-1"></i> Home
+                        </a>
+                     </li>
+                     <li class = "my-3">
+                        <a href = "collection" class = "text-white text-decoration-none text-muted">
+                        <i class = "fas fa-chevron-right me-1"></i> Collection
+                        </a>
+                     </li>
+                     <li class = "my-3">
+                        <a href = "#blogs" class = "text-white text-decoration-none text-muted">
+                        <i class = "fas fa-chevron-right me-1"></i> Blogs
+                        </a>
+                     </li>
+                     <li class = "my-3">
+                        <a href = "#about" class = "text-white text-decoration-none text-muted">
+                        <i class = "fas fa-chevron-right me-1"></i> About Us
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <div class = "col-md-6 col-lg-3">
+                  <h5 class = "fw-light mb-3">Contact Us</h5>
+                  <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                     <span class = "me-3">
+                     <i class = "fas fa-map-marked-alt"></i>
+                     </span>
+                     <span class = "fw-light">
+                     Albert Street, New York, AS 756, United States of America
+                     </span>
+                  </div>
+                  <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                     <span class = "me-3">
+                     <i class = "fas fa-envelope"></i>
+                     </span>
+                     <span class = "fw-light">
+                     trendy.support@gmail.com
+                     </span>
+                  </div>
+                  <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                     <span class = "me-3">
+                     <i class = "fas fa-phone-alt"></i>
+                     </span>
+                     <span class = "fw-light">
+                     +9786 6776 236
+                     </span>
+                  </div>
+               </div>
+               <div class = "col-md-6 col-lg-3">
+                  <h5 class = "fw-light mb-3">Follow Us</h5>
+                  <div>
+                     <ul class = "list-unstyled d-flex">
+                        <li>
+                           <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                           <i class = "fab fa-facebook-f"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                           <i class = "fab fa-twitter"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                           <i class = "fab fa-instagram"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                           <i class = "fab fa-pinterest"></i>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end of footer -->
+      <!-- end of footer -->
+    
+         
+   
+         <script>
+
+
+
+
+
+
+var searchBtn = document.getElementById("searchBtn");
+    var searchBox = document.getElementById("searchBox");
+    var closeSearch = document.getElementById("closeBtn"); // Corrected the ID here
+    
+    // Show search box when search icon is clicked
+    searchBtn.addEventListener("click", function() {
+        searchBox.style.display = "block";
+    });
+    
+    // Close search box when close button is clicked
+    closeSearch.addEventListener("click", function() {
+      // This event listener listens for a click event on the close button.
+        // When the close button is clicked, this function is executed.
+        
+        // Set the display property of the search box to "none" to hide it
+        searchBox.style.display = "none";
+    });
+
+
+         
+         
+         
+         
+         function AddtoCart(){
+         
+         var currentCount = parseInt(document.getElementById('cartcountId').innerText);
+         
+         document.getElementById('cartcountId').innerText = currentCount + 1;
+         
+         }
+         var addedWishList = []
+         function changeColor(id) {
+            if(addedWishList.includes(id)){
+               var icons = document.getElementById('heart'+id);
+               icons.style.color = "white" ;
+               var index = addedWishList.indexOf(id)
+               addedWishList.splice(index,1)
+               var favCounts = parseInt(document.getElementById('favcountid').innerText);
+         
+         document.getElementById('favcountid').innerText = favCounts - 1;
+
+            }
+            else{
+               var icon = document.getElementById('heart'+id);
+               icon.style.color = "red";
+               addedWishList.push(id)
+               var favCounts = parseInt(document.getElementById('favcountid').innerText);
+         
+         document.getElementById('favcountid').innerText = favCounts + 1;
+
+            }
+
+            console.log(addedWishList)
+
+
+         }
+         
+         
+
+
+
+
+
+
+
+
+
+
+
+         </script>
+   </body>

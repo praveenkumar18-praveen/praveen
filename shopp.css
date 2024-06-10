@@ -1,0 +1,571 @@
+body{
+    font-family:'Poppins', sans-serif;
+}
+
+.count{
+    background-color: rgb(216, 122, 138);
+        display: inline-block;
+        padding: .35em .65em;
+        font-size: .75em;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        vertical-align: baseline;
+        border-radius: .25rem;
+}
+   
+.navbar{
+background-color: #fff; 
+padding-top: 1.5rem!important;
+padding-bottom: 1.5rem!important; 
+box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+display: flex;
+justify-content: space-between;
+
+}
+
+
+
+
+#searchBox {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    background-color: #fff; /* Adjust background color */
+    border: 1px solid #ccc; /* Adjust border */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Add shadow for better visibility */
+    padding: 10px; /* Adjust padding */
+    margin-top: 5px; /* Adjust margin */
+}
+
+#searchBox input[type="text"] {
+    width: 200px; /* Adjust width */
+    padding: 5px; /* Adjust padding */
+    border: 1px solid #ccc; /* Adjust border */
+}
+
+#searchBox button {
+    padding: 5px 10px; /* Adjust padding */
+    margin-left: 5px; /* Adjust margin */
+    background-color: #007bff; /* Adjust background color */
+    color: #fff; /* Adjust text color */
+    border: none;
+    cursor: pointer;
+}
+.fixed-top{
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+z-index: 1030;
+}
+
+.row.move-up {
+    margin-top: -280px; /* Adjust the value as needed */
+  }
+
+
+
+.navbar-brand  img{
+    width: 30px;
+    height: auto;
+}
+.navbar-brand  span{
+    letter-spacing: 2px;
+    font-family: 'Kaisei Tokumin', serif;
+    margin-left:.5rem;
+    color:rgba(0,0,0,.9);
+    text-transform: uppercase;
+
+
+}
+
+.navbar-nav .nav-link {
+text-transform: uppercase; 
+color: rgba(0,0,0,.9);
+ }
+
+ .navbar-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 0; 
+    margin-left: 150px;
+  }
+  .nav-btns .btn {
+    position: relative;
+    margin-right: 10px; 
+  }
+  .nav-btns {
+        display: flex;
+        align-items: center;
+      order: 2; 
+      margin-right: 70px;
+  }
+  
+  #navbarNav {
+    order: 1; 
+    margin-left: 90px;
+    
+  }
+  .nav-btns .count {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    transform: translate(-50%, -50%);
+  }
+ .nav-link:hover{
+    color: #e5345b!important;
+ }
+
+ .nav-item{
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-toggler {
+    padding: 0.5rem 1rem; 
+    border: none; 
+  }
+  /* media queries */
+@media(min-width: 992px){
+    .nav-item{
+        border-bottom: none;
+    }
+}
+
+
+/* Header */
+#header{
+    background: url(images/banner-img-1.jpg) top/cover no-repeat;
+    padding-top: 104px;
+    height: 100vh!important;
+
+}
+
+.carousel-item a {
+    margin-top: 1rem;
+    text-transform: uppercase; 
+    border-color: #fff!important;
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 10px 28px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85)
+
+  }
+.carousel-item h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 60px;
+    font-family: 'Kaisei Tokumin', serif;;
+
+}
+.container a:hover {
+    background-color: #e5345b ;
+    border-color: #e5345b;
+}
+
+.carousel-item{
+    text-align: center;
+}
+
+
+
+
+
+.carousel-item h2{
+    text-transform: capitalize;
+    color: #fff;
+    
+} 
+
+.container{
+    display: flex;
+align-items: center;
+height: 100%;
+}
+
+
+/* collection */
+
+.title{
+    text-align: center;
+   
+}
+#collection{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+.title h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color:#e5345b ;
+    left: -20px;
+    top: 50%;
+   transform: translateY(-50%);
+}
+
+
+.filter-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5rem; 
+    
+}
+.filter-button-group button:hover {
+    background-color: #e5345b !important;
+    color: #fff !important;
+    border-color: #e5345b !important;
+}
+
+.row.g-0{
+    margin-top: 40px;
+    padding-left: 50px;
+}
+.filter-button-group .btn {
+    margin: 0.5rem; /* Adjust spacing between buttons */
+    padding: 10px 28px; /* Adjust button padding */
+    background-color: #ffffff; /* Button background color */
+    border: 1px solid rgb(85, 85, 85);
+     /* Button border */
+    border-radius: 25px; /* Button border radius */
+    color: #333; /* Button text color */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.active-filter-btn{
+    background-color: #e5345b !important;
+    color: #fff !important;
+    border-color: #e5345b !important;
+}
+
+
+
+
+.collection-list {
+    margin-top: 4rem; /* Adjust margin-top as needed */
+}
+
+
+
+.collection-img img {
+    width: 100%; /* Make the image fill its container */
+}
+
+.collection-img span{
+    top: 20px;
+    right: 20px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #e5345b;
+}
+
+
+#special {
+    padding-top: 2rem; /* Adjust top padding as needed */
+    padding-bottom: 8rem; /* Adjust bottom padding as needed */
+}
+.titl {
+    text-align: center; /* Center-align text */
+   
+}
+.titl h2 {
+    position: relative; /* Set position to relative */
+    display: inline-block; /* Display as inline-block */
+    /* Add more styles for the <h2> element here */
+}
+.titl h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color:#e5345b ;
+    left: -20px;
+    top: 50%;
+   transform: translateY(-50%);
+}
+.special-list .special-img {
+    position: relative; /* Set position to relative */
+    overflow: hidden; /* Hide overflowing content */
+}
+.special-img img{
+    width: 80%;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    
+}
+
+.special-img:hover img{
+            transform: scale(1.2);
+}
+
+.special-img span{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    top: 10px;
+    right: 70px;
+
+}
+
+.text-center{
+    margin-right: 40px;
+}
+
+.special-list{
+    padding-left: 50px;
+}
+
+.text-center a {
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 8px 20px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85)
+}
+
+
+/* offers */
+#offers{
+    background: url(images/offer_img.jpg) center/cover no-repeat;
+        display: flex;
+        text-align: left;
+        margin-top:-30px;
+        padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+#offers .row{
+    min-height: 60vh;
+}
+
+#offers .offers-content {
+    text-align: center; /* Center the content horizontally */
+}
+.offers-content span{
+    font-size: 28px;
+    color: white;
+}
+
+#offers .offers-content h2 {
+    margin-top: 2rem; /* Add top margin to the heading */
+    margin-bottom: 4rem; /* Add bottom margin to the heading */
+    color: white; /* Set the color of the heading text to white */
+    font-size: 60px;
+    font-family: 'Kaisei Tokumin', serif;
+    margin-left: 100px;
+    padding-left: 50px;
+}
+
+
+#offers .conoff .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.offers-content .btn{
+    border-color: transparent!important;
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85);
+}
+
+.offers-content .btn:hover{
+    background-color:#e5345b ;
+    color: #ffffff;
+
+
+}
+
+
+.tit{
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.tit h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color:#e5345b ;
+    left: -20px;
+    top: 50%;
+   transform: translateY(-50%);
+}
+
+.tit h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.card-body a.btn {
+    background-color: #fff;
+    color: rgb(85, 85, 85);
+    padding: 10px 28px;
+    border-radius: 25px;
+    border: 1px solid rgb(85, 85, 85);
+}
+
+
+.row.g-3 {
+padding-left: 50px;
+}
+
+
+
+
+
+#about {
+   display: flex;
+   justify-content: space-evenly;
+    background-color: rgba(179, 179, 179, 0.05);
+
+}
+#about h2 {
+    position: absolute;
+right: -500px;    
+top: -370px;
+left: 370px;
+}
+
+#about p{
+
+    position: absolute;
+    right: -500px; 
+    top: -400px;
+    left: 570px;
+    
+}
+
+
+
+
+
+.titlee h2::before{
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 50px;
+    background-color:#e5345b ;
+    left: -20px;
+    top: 50%;
+   transform: translateY(-50%);
+}
+.titlee h2{
+    position: absolute;
+    bottom: 350px;
+}
+
+
+
+
+/* newsletter */
+#newsletter{
+    background-color: rgba(179, 179, 179, 0.05);
+    margin-left: 360px;
+}
+#newsletter p{
+    max-width: 600px;
+}
+#newsletter .input-group{
+    max-width: 500px;
+}
+#newsletter .form-control{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+#newsletter .btn{
+    background-color: #e5345b;
+    color: #fff;
+    border-color: #e5345b;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    
+}
+#newsletter .btn:hover{
+    background-color: #000;
+    border-color: #000;
+}
+
+
+
+
+
+
+footer {
+    background-color: #343a40; /* Adjust the color as needed */
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+
+
+footer .brand{
+    font-family: 'Kaisei Tokumin', serif;
+    letter-spacing: 2px;
+}
+footer a{
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.2s ease;
+    transition: color 0.2s ease;
+}
+footer a:hover{
+    color: #df5e7a!important;
+    
+}
+
+
+.account {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 130px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.submenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu ul li a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.submenu ul li a:hover {
+    background-color: #ddd;
+}
+
+.account:hover .submenu {
+    display: block;
+}
