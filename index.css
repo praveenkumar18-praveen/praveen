@@ -436,7 +436,27 @@ padding-left: 50px;
 
 
 
+#about-us {
+   display: flex;
+   justify-content: space-evenly;
+    background-color: rgba(179, 179, 179, 0.05);
 
+}
+#about-us h2 {
+    position: absolute;
+right: -500px;    
+top: -370px;
+left: 370px;
+}
+
+#about-us p{
+
+    position: absolute;
+    right: -500px; 
+    top: -400px;
+    left: 570px;
+    
+}
 #about-us .title {
 
 text-align: left;
@@ -456,6 +476,10 @@ section#about {
 position: relative;
 
 }
+
+
+
+
 
 
 
