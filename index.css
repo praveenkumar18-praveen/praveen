@@ -437,26 +437,24 @@ padding-left: 50px;
 
 
 
-#about {
-   display: flex;
-   justify-content: space-evenly;
-    background-color: rgba(179, 179, 179, 0.05);
+#about-us .title {
+
+text-align: left;
 
 }
-#about h2 {
-    position: absolute;
-right: -500px;    
-top: -370px;
-left: 370px;
+
+.about-wrap {
+
+position: relative;
+
+left: -80px;
+
 }
 
-#about p{
+section#about {
 
-    position: absolute;
-    right: -500px; 
-    top: -400px;
-    left: 570px;
-    
+position: relative;
+
 }
 
 
