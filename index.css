@@ -1,7 +1,5 @@
 body{
     font-family:'Poppins', sans-serif;
-        overflow-x: hidden;
-
 }
 
 .count{
@@ -436,20 +434,21 @@ padding-left: 50px;
 
 
 
-#about-us {
+
+#about {
    display: flex;
    justify-content: space-evenly;
     background-color: rgba(179, 179, 179, 0.05);
 
 }
-#about-us h2 {
+#about h2 {
     position: absolute;
 right: -500px;    
 top: -370px;
 left: 370px;
 }
 
-#about-us p{
+#about p{
 
     position: absolute;
     right: -500px; 
@@ -457,29 +456,6 @@ left: 370px;
     left: 570px;
     
 }
-#about-us .title {
-
-text-align: left;
-
-}
-
-.about-wrap {
-
-position: relative;
-
-left: -80px;
-
-}
-
-section#about {
-
-position: relative;
-
-}
-
-
-
-
 
 
 
@@ -593,3 +569,12 @@ footer a:hover{
 .account:hover .submenu {
     display: block;
 }
+
+
+
+
+
+
+
+
+
